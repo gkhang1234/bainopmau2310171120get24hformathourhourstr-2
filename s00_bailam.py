@@ -42,5 +42,12 @@ get_24hformat_hour('11 PM')            | 23                     | 12
 
 #region bailam
 def get_24hformat_hour(hour_str):
-  return 'todo'
+  hour_str = hour_str.strip().lower()
+  if (int(hour_str[0])) > 0 and (int(hour_str[0])) <= 9:
+    return (int(hour_str[0]))
+  elif (int(hour_str[1])) > 9:
+    return str(int(hour_str[1]) + 12)
 #endregion bailam
+
+
+
